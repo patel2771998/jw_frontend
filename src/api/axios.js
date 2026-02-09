@@ -1,6 +1,12 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_URL || '/api';
+const raw = import.meta.env.VITE_API_URL || '';
+// Ensure full URL: if set but missing protocol, prepend https://
+const baseURL = raw
+  ? raw.startsWith('http://') || raw.startsWith('https://')
+    ? raw.replace(/\/+$/, '')
+    : `https://${raw.replace(/\/+$/, '')}`
+  : '/api';
 
 const api = axios.create({
   baseURL,
