@@ -2,5 +2,11 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://jw-backend-dxzdag4xy-miravs-projects.vercel.app/api/:path*"
+    }
+  ]
 }
