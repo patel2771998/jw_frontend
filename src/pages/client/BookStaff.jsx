@@ -157,7 +157,7 @@ export default function BookStaff() {
   return (
     <div>
       <h1 className="font-display text-2xl font-bold text-slate-900">Book Your Session</h1>
-      <p className="mt-1 text-slate-600">Select date, start time, duration (60/90/120 min)</p>
+      <p className="mt-1 text-slate-600">Select date, start time, duration (60/90/120 min). Staff are shown available from 15 minutes after a prior booking.</p>
 
       {submitted && (
         <div className="mt-6 rounded-lg bg-green-50 p-4 text-green-800">
