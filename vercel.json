@@ -7,7 +7,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://jw-backend-dxzdag4xy-miravs-projects.vercel.app/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
-
